@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>knowknow的bl</title>
+			<style>
+				.box{
+					position: relative;
+					width: 600px;
+					height: 600px;
+					clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+					background-color:rgb(234, 204, 143);
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 40px;
+				}
+				
+				
+		    @keyframes xc{
+		    	0%{; left:0px; top:150px;}         
+		    	17% {; left:285px; top:10px;}         
+		    	34% {; left:550px; top:150px;}   
+				50% {; left:550px; top:400px;} 
+				67% {; left:260px; top:540px;} 
+				83% {; left:0px; top:400px;}    
+		    	100% {:0px; top:150px;}     
+		    }
+		    div.xc{
+		    	animation: xc 5s;
+		    	position: absolute; 
+		    	animation-iteration-count: infinite;
+		    }
+    }
+
+			</style>
+			
+	</head>
+	<body>
+		
+		<div class="box">
+			<div class="xc">
+				 <img src="小车.jpg" class="img1" height="50px" width="50px">	
+		</div>
+	</body>
+</html>
