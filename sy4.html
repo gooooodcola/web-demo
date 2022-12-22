@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>时钟</title>
+</head>
+<body style="background-color: black;">
+	<center>
+<strong id="time" style="font-family:宋体;color:white;font-size:80px;"></strong> 
+<i id="week" style="font-family:楷体;color:khaki;font-size:50px;"></i>
+<script>
+function myFunction(){
+	var d = new Date();
+	var x = document.getElementById("time");
+	x.innerHTML=d.toLocaleString();
+	var w = document.getElementById("week");
+	var weekday=new Array(7);
+	weekday[1]="星期一";
+	weekday[2]="星期二";
+	weekday[3]="星期三";
+	weekday[4]="星期四";
+	weekday[5]="星期五";
+	weekday[6]="星期六";
+	weekday[7]="星期日";
+	w.innerHTML=weekday[d.getDay()];
+}
+setInterval("myFunction()",1000); 
+window.onload=myFunction();
+
+</script>
+</center>
+</body>
+</html>

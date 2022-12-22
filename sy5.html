@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>怦然心动</title>
+	</head>
+	<body>
+		
+		<p>素材</p>
+		<img id="heart" src="heart.png"  width="200" height="200">
+		<p>跳动效果</p>
+		<canvas id="can" width="400" height="400" style="border:3px solid #000000;"></canvas>
+		<script>
+			var c=document.getElementById("can");
+			var h=c.getContext("2d");
+			 var img=document.getElementById("heart"); 
+			 img.onload = function(){
+				 h.drawImage(heart,100,100,200,200);
+			 }
+			 function big(){
+				 h.clearRect(0,0,400,400);
+				 h.drawImage(heart,50,50,300,300);
+			 }
+			 function normal(){
+			 	h.clearRect(0,0,400,400);
+			 	h.drawImage(heart,100,100,200,200);
+			 }
+			 function small(){
+			 	h.clearRect(0,0,400,400);
+			 	h.drawImage(heart,150,150,100,100);
+			 }
+			 function boom(){
+			 	setTimeout("small()",0);
+				setTimeout("normal()",500);
+				setTimeout("big()",1000);
+				setTimeout("normal()",1500);
+			 }
+			 setInterval("boom()",2000); 
+		</script>
+	</body>
+</html>
